@@ -1,0 +1,8 @@
+version: 0.0
+Resources:
+  - MyLambdaFunction:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: MyLambdaFunction
+        Alias: live
+        CurrentVersion: version-001
