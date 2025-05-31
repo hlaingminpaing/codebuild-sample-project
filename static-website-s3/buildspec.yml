@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Building static website"
+  build:
+    commands:
+      - echo "No build needed for static site"
+  post_build:
+    commands:
+      - aws s3 sync . s3://my-static-site-bucket/ --delete
+artifacts:
+  files:
+    - index.html
